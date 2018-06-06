@@ -12,6 +12,7 @@
 		ED80E2C620C804BE00DCA846 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80E2C420C804BE00DCA846 /* Main.storyboard */; };
 		ED80E2C820C804C000DCA846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED80E2C720C804C000DCA846 /* Assets.xcassets */; };
 		ED80E2CB20C804C000DCA846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80E2C920C804C000DCA846 /* LaunchScreen.storyboard */; };
+		ED80E2D520C8052C00DCA846 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED80E2D420C8052C00DCA846 /* Intents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		ED80E2C720C804C000DCA846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED80E2CA20C804C000DCA846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED80E2CC20C804C000DCA846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED80E2D220C8050600DCA846 /* SiriShortcutsTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsTutorial.entitlements; sourceTree = "<group>"; };
+		ED80E2D420C8052C00DCA846 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED80E2D520C8052C00DCA846 /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				ED80E2BF20C804BE00DCA846 /* SiriShortcutsTutorial */,
 				ED80E2BE20C804BE00DCA846 /* Products */,
+				ED80E2D320C8052C00DCA846 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		ED80E2BF20C804BE00DCA846 /* SiriShortcutsTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				ED80E2D220C8050600DCA846 /* SiriShortcutsTutorial.entitlements */,
 				ED80E2C020C804BE00DCA846 /* AppDelegate.swift */,
 				ED80E2C220C804BE00DCA846 /* ViewController.swift */,
 				ED80E2C420C804BE00DCA846 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				ED80E2CC20C804C000DCA846 /* Info.plist */,
 			);
 			path = SiriShortcutsTutorial;
+			sourceTree = "<group>";
+		};
+		ED80E2D320C8052C00DCA846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E2D420C8052C00DCA846 /* Intents.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,11 @@
 				TargetAttributes = {
 					ED80E2BC20C804BE00DCA846 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -280,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsTutorial/SiriShortcutsTutorial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN82UPUDUJ;
 				INFOPLIST_FILE = SiriShortcutsTutorial/Info.plist;
@@ -298,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsTutorial/SiriShortcutsTutorial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN82UPUDUJ;
 				INFOPLIST_FILE = SiriShortcutsTutorial/Info.plist;
