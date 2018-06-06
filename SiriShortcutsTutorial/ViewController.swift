@@ -22,14 +22,14 @@ class ViewController: UIViewController {
         activity.isEligibleForSearch = true
         activity.isEligibleForPrediction = true
         activity.persistentIdentifier = NSUserActivityPersistentIdentifier(rawValue: "com.thelightprj.SiriShortcutsTutorial.makeRed")
-        self.view.userActivity = activity
+        view.userActivity = activity
         activity.becomeCurrent()
         
         makeViewRed()
     }
     
     public func makeViewRed() {
-        self.view.backgroundColor = .red
+        view.backgroundColor = .red
     }
 }
 
